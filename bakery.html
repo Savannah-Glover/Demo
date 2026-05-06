@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golden Crust Bakery</title>
+  <style>
+    :root {
+      --cream: #fff8ed;
+      --tan: #f4dec1;
+      --brown: #5a3a2f;
+      --accent: #d28b36;
+      --text: #2f241f;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, var(--cream), #fff);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: radial-gradient(circle at top right, #f9e3bf, var(--tan));
+      border-bottom: 2px solid #e8c89b;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--brown);
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--brown);
+      font-weight: 600;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 3rem 0 3.5rem;
+    }
+
+    .hero h1 {
+      margin: 0 0 0.8rem;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: #3d2b22;
+    }
+
+    .hero p {
+      margin: 0 0 1.2rem;
+      max-width: 55ch;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.1rem;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid #f1d7b4;
+      border-radius: 14px;
+      padding: 1.2rem;
+      box-shadow: 0 10px 26px rgba(90, 58, 47, 0.08);
+    }
+
+    section {
+      padding: 2.4rem 0;
+    }
+
+    .section-title {
+      margin: 0 0 1rem;
+      color: var(--brown);
+      font-size: 1.6rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .menu-item {
+      background: var(--card);
+      border: 1px solid #f1e2ce;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .menu-item h3 {
+      margin: 0 0 0.35rem;
+      color: #4c3328;
+    }
+
+    .price {
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .about {
+      background: #fff8ef;
+      border-top: 1px solid #f6e3cb;
+      border-bottom: 1px solid #f6e3cb;
+    }
+
+    .about p {
+      max-width: 75ch;
+      margin: 0;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .contact-box {
+      background: var(--card);
+      border: 1px solid #f1e2ce;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.4rem 0 2rem;
+      color: #6f5a50;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .menu-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Golden Crust Bakery</div>
+        <div class="nav-links">
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <div>
+          <h1>Freshly Baked Happiness, Every Morning</h1>
+          <p>
+            From buttery croissants to artisan sourdough, we bake small batches
+            daily using quality ingredients and family recipes.
+          </p>
+          <a class="btn" href="#menu">See Today's Favorites</a>
+        </div>
+        <div class="hero-card">
+          <h3>Opening Hours</h3>
+          <p>Mon - Fri: 7:00 AM - 6:00 PM</p>
+          <p>Saturday: 8:00 AM - 5:00 PM</p>
+          <p>Sunday: 8:00 AM - 2:00 PM</p>
+          <p><strong>Address:</strong> 123 Main Street, Brookville</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="menu" class="container">
+      <h2 class="section-title">Popular Menu</h2>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <h3>Classic Croissant</h3>
+          <p>Flaky, buttery, and baked fresh every morning.</p>
+          <div class="price">$3.50</div>
+        </article>
+        <article class="menu-item">
+          <h3>Rustic Sourdough</h3>
+          <p>Slow-fermented loaf with a crisp crust and airy crumb.</p>
+          <div class="price">$7.00</div>
+        </article>
+        <article class="menu-item">
+          <h3>Blueberry Muffin</h3>
+          <p>Moist vanilla crumb with juicy blueberries and sugar top.</p>
+          <div class="price">$3.00</div>
+        </article>
+        <article class="menu-item">
+          <h3>Cinnamon Roll</h3>
+          <p>Soft dough swirled with cinnamon and cream cheese glaze.</p>
+          <div class="price">$4.25</div>
+        </article>
+        <article class="menu-item">
+          <h3>Chocolate Tart</h3>
+          <p>Dark chocolate ganache in a crisp buttery tart shell.</p>
+          <div class="price">$5.50</div>
+        </article>
+        <article class="menu-item">
+          <h3>Seasonal Fruit Danish</h3>
+          <p>Light pastry topped with cream and fresh local fruit.</p>
+          <div class="price">$4.75</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <p>
+          Golden Crust Bakery began with one family oven and a love for simple,
+          honest baking. We focus on handcrafted breads and pastries made in
+          small batches so every customer gets something warm, fresh, and full
+          of flavor.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2 class="section-title">Visit or Order</h2>
+      <div class="contact-wrap">
+        <div class="contact-box">
+          <h3>Contact</h3>
+          <p><strong>Phone:</strong> (555) 123-4567</p>
+          <p><strong>Email:</strong> hello@goldencrustbakery.com</p>
+        </div>
+        <div class="contact-box">
+          <h3>Pre-Order</h3>
+          <p>
+            Call before 4 PM for next-day cake pickups and custom bread boxes.
+          </p>
+          <a class="btn" href="mailto:hello@goldencrustbakery.com">Email Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Golden Crust Bakery. Baked with care.</div>
+  </footer>
+</body>
+</html>
