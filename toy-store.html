@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WonderBox Toy Store</title>
+  <style>
+    :root {
+      --bg: #f7fbff;
+      --primary: #4f46e5;
+      --secondary: #06b6d4;
+      --accent: #f59e0b;
+      --text: #1f2937;
+      --card: #ffffff;
+      --muted: #6b7280;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eff6ff, var(--bg));
+      line-height: 1.5;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(90deg, #dbeafe, #ecfeff);
+      border-bottom: 1px solid #c7d2fe;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #312e81;
+    }
+
+    .links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      color: #3730a3;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 2.8rem 0 3.2rem;
+    }
+
+    .hero h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      color: #1e1b4b;
+    }
+
+    .hero p {
+      margin: 0 0 1rem;
+      max-width: 55ch;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--primary);
+      color: white;
+      padding: 0.7rem 1.1rem;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid #dbeafe;
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: 0 10px 24px rgba(79, 70, 229, 0.12);
+    }
+
+    section { padding: 2.2rem 0; }
+
+    h2 {
+      margin: 0 0 1rem;
+      color: #312e81;
+    }
+
+    .toy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .toy-card {
+      background: var(--card);
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .toy-card h3 {
+      margin: 0 0 0.4rem;
+      color: #111827;
+    }
+
+    .price {
+      margin-top: 0.4rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .info {
+      background: #ecfeff;
+      border-top: 1px solid #bae6fd;
+      border-bottom: 1px solid #bae6fd;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .box {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .muted { color: var(--muted); }
+
+    footer {
+      text-align: center;
+      color: #4b5563;
+      padding: 1.4rem 0 2rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; }
+      .toy-grid { grid-template-columns: 1fr 1fr; }
+      .contact { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      .toy-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">WonderBox Toy Store</div>
+        <div class="links">
+          <a href="#featured">Featured Toys</a>
+          <a href="#about">About</a>
+          <a href="#visit">Visit</a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <div>
+          <h1>Toys That Spark Imagination</h1>
+          <p>
+            Discover fun, safe, and educational toys for every age. From puzzles
+            and plushies to building kits and board games, there is something for
+            every curious mind.
+          </p>
+          <a class="btn" href="#featured">Shop Favorites</a>
+        </div>
+        <aside class="hero-card">
+          <h3>This Week at WonderBox</h3>
+          <p>Buy 2 board games, get 1 mini puzzle free.</p>
+          <p>Saturday Storytime: 11:00 AM</p>
+          <p><strong>Open:</strong> Mon-Sat 10:00 AM - 8:00 PM</p>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="featured" class="container">
+      <h2>Featured Toys</h2>
+      <div class="toy-grid">
+        <article class="toy-card">
+          <h3>Galaxy Building Blocks</h3>
+          <p>120 colorful pieces for creative space-themed builds.</p>
+          <div class="price">$24.99</div>
+        </article>
+        <article class="toy-card">
+          <h3>Adventure Plush Bear</h3>
+          <p>Soft, huggable companion made with child-safe fabric.</p>
+          <div class="price">$14.50</div>
+        </article>
+        <article class="toy-card">
+          <h3>Junior Science Lab Kit</h3>
+          <p>Hands-on experiments that make science easy and exciting.</p>
+          <div class="price">$29.00</div>
+        </article>
+        <article class="toy-card">
+          <h3>Wooden Train Set</h3>
+          <p>Classic tracks and magnetic cars for endless play.</p>
+          <div class="price">$34.99</div>
+        </article>
+        <article class="toy-card">
+          <h3>Rainbow Puzzle Pack</h3>
+          <p>Three age-level puzzles to build focus and problem-solving.</p>
+          <div class="price">$12.00</div>
+        </article>
+        <article class="toy-card">
+          <h3>Family Quest Board Game</h3>
+          <p>Fast-paced adventure game for 2-5 players.</p>
+          <div class="price">$27.75</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="info">
+      <div class="container">
+        <h2>About WonderBox</h2>
+        <p class="muted">
+          We are a neighborhood toy store focused on play-based learning and
+          family fun. Our team handpicks every toy for quality, safety, and
+          creativity.
+        </p>
+      </div>
+    </section>
+
+    <section id="visit" class="container">
+      <h2>Visit Us</h2>
+      <div class="contact">
+        <div class="box">
+          <h3>Store Details</h3>
+          <p><strong>Address:</strong> 45 Pine Avenue, Brookville</p>
+          <p><strong>Phone:</strong> (555) 987-1234</p>
+          <p><strong>Email:</strong> hello@wonderboxtoys.com</p>
+        </div>
+        <div class="box">
+          <h3>Party Orders</h3>
+          <p>Create custom toy bundles for birthdays and events.</p>
+          <a class="btn" href="mailto:hello@wonderboxtoys.com">Contact Team</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 WonderBox Toy Store</div>
+  </footer>
+</body>
+</html>
